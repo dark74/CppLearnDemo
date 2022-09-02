@@ -12,7 +12,7 @@ int main() {
 	return 0;
 }
 #elif 0
-int main() { 
+int main() {
 	cout << "2";
 	return 0;
 }
@@ -97,7 +97,7 @@ int main() {
 * 标识符不能与C++关键词相同
 * 标识符的作用域是名字的有效范围，3种作用域：全局、函数、块作用域
 */
-#elif 1 // 命名空间namespace
+#elif 0 // 命名空间namespace
 // 为区分不同库里面相同名的函数，名字限定的空间
 namespace DEBUG {
 	string BASE_URL = "www.t-mznfc.com";
@@ -121,6 +121,39 @@ int main() {
 	RELEASE::log();
 	return 0;
 }
-#elif 0 // 
-
+#elif 0 // 练习题
+// 从键盘输入3个实数，然后按从小到大的程序输出
+int main() {
+	int a;
+	int max = -10000000;
+	while (std::cin >> a) {
+		if (a > max)
+		{
+			max = a;
+		}
+	}
+	cout << "输入的最大整数为:" << max << endl;
+	return 0;
+}
+#elif 1 // 练习题
+// 假设行数从键盘输入，打印输出如下的金字塔
+int main() {
+	int rows;
+	printf("Enter number of rows:");
+	cin >> rows;
+	int lastRowStarCount = 2 * rows - 1; // 最后一行星星的总数
+	for (size_t row = 1; row <= rows; row++)
+	{
+		int totalStar = 2 * row - 1; // 当前行星星总数
+		int spaceCount = (lastRowStarCount - totalStar) / 2; // 当前行左右部分的空白数 
+		// 输入星号前半部分的空白
+		cout << string(spaceCount, ' ');
+		// 输入当前行星星
+		string curStars = string(totalStar, '*');
+		cout << curStars;
+		// 输出星号后半部分的空白
+		cout << string(spaceCount, ' ') << endl;
+	}
+	return 0;
+}
 #endif // 0
