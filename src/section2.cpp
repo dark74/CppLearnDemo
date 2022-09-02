@@ -135,7 +135,7 @@ int main() {
 	cout << "输入的最大整数为:" << max << endl;
 	return 0;
 }
-#elif 1 // 练习题
+#elif 0 // 练习题
 // 假设行数从键盘输入，打印输出如下的金字塔
 int main() {
 	int rows;
